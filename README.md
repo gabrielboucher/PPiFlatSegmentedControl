@@ -34,6 +34,17 @@ PPiFlatSegmentedControl *segmented=[[PPiFlatSegmentedControl alloc] initWithFram
     [self.view addSubview:segmented];
 
 ```
+### Properties
+The parameters you are able to modify are the following:
+* *textFont*: Font of text inside segments
+* *textColor*: Color of text inside segments
+* *selectedTextColor*: Color of text inside segments ( selected state )
+* *color*: Background color of full segmentControl
+* *selectedColor*: Background color for segment in selected state
+* *borderWith*: Width of the border line around segments and control
+* *borderColor*: Color "" ""
 
+*Note: When you initialize the control you have to pass a Block with the behaviour when any segment has been selected*
+ 
 ## Screenshots
 ![image](http://img202.imageshack.us/img202/5927/faws.png)
