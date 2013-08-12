@@ -7,31 +7,26 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
+
+typedef void(^selectionBlock)(NSUInteger segmentIndex);
 
 @interface PPiFlatSegmentedControl : UIView
 
 
-/**
- *	Properties
- *
- *	@property	selectedColor	: Color for the selected segment
- *	@property	Color	: Color for no-selected segment
- *	@property	textColor	: Color for text Labels
- *	@property   borderColor : Borer color
- *  @property   segments : Array with segments ( views ) for segmentedControl
- */
-
 @property (nonatomic,strong) UIColor *selectedColor;
 @property (nonatomic,strong) UIColor *color;
 @property (nonatomic,strong) UIColor *textColor;
+@property (nonatomic,strong) UIColor *selectedTextColor;
+@property (nonatomic,strong) UIFont *textFont;
 @property (nonatomic,strong) UIColor *borderColor;
+@property (nonatomic) CGFloat borderWidth;
 
 
-- (id)initWithFrame:(CGRect)frame andItems:(NSArray*)items;
+- (id)initWithFrame:(CGRect)frame andItems:(NSArray*)items andSelectionBlock:(selectionBlock)block;
 -(void)setEnabled:(BOOL)enabled forSegmentAtIndex:(NSUInteger)segment;
 -(BOOL)isEnabledForSegmentAtIndex:(NSUInteger)index;
--(void)setTitleForSegmentAtIndex:(NSUInteger)index;
--(void)setFont:(UIFont*)font;
+-(void)setTitle:(NSString*)title forSegmentAtIndex:(NSUInteger)index;
 
 
 @end

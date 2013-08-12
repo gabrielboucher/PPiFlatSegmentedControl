@@ -19,9 +19,14 @@
 		3D2E5BF817B93AAC00D839AB /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D2E5BF617B93AAC00D839AB /* MainStoryboard.storyboard */; };
 		3D2E5BFB17B93AAC00D839AB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2E5BFA17B93AAC00D839AB /* ViewController.m */; };
 		3D2E5C0417B93ABC00D839AB /* PPiFlatSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2E5C0317B93ABC00D839AB /* PPiFlatSegmentedControl.m */; };
+		3D3A158017B94FDE004C044F /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D3A157F17B94FDE004C044F /* fontawesome-webfont.ttf */; };
+		3DDAD74417B949AA008C9AEA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DDAD74317B949AA008C9AEA /* QuartzCore.framework */; };
+		AFD9EFA6133948748D10F2DE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DFD36B0C8994CE9B32D958C /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0DFD36B0C8994CE9B32D958C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A86ECC264384EF0AD869839 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		3D2E5BDB17B93AAC00D839AB /* PPiFlatSegmentedControl-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PPiFlatSegmentedControl-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D2E5BDE17B93AAC00D839AB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3D2E5BE017B93AAC00D839AB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -40,6 +45,8 @@
 		3D2E5BFA17B93AAC00D839AB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3D2E5C0217B93ABC00D839AB /* PPiFlatSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPiFlatSegmentedControl.h; sourceTree = "<group>"; };
 		3D2E5C0317B93ABC00D839AB /* PPiFlatSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPiFlatSegmentedControl.m; sourceTree = "<group>"; };
+		3D3A157F17B94FDE004C044F /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
+		3DDAD74317B949AA008C9AEA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,9 +54,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DDAD74417B949AA008C9AEA /* QuartzCore.framework in Frameworks */,
 				3D2E5BDF17B93AAC00D839AB /* UIKit.framework in Frameworks */,
 				3D2E5BE117B93AAC00D839AB /* Foundation.framework in Frameworks */,
 				3D2E5BE317B93AAC00D839AB /* CoreGraphics.framework in Frameworks */,
+				AFD9EFA6133948748D10F2DE /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +71,7 @@
 				3D2E5BE417B93AAC00D839AB /* PPiFlatSegmentedControl-Demo */,
 				3D2E5BDD17B93AAC00D839AB /* Frameworks */,
 				3D2E5BDC17B93AAC00D839AB /* Products */,
+				2A86ECC264384EF0AD869839 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,9 +86,11 @@
 		3D2E5BDD17B93AAC00D839AB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3DDAD74317B949AA008C9AEA /* QuartzCore.framework */,
 				3D2E5BDE17B93AAC00D839AB /* UIKit.framework */,
 				3D2E5BE017B93AAC00D839AB /* Foundation.framework */,
 				3D2E5BE217B93AAC00D839AB /* CoreGraphics.framework */,
+				0DFD36B0C8994CE9B32D958C /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -114,6 +126,7 @@
 		3D2E5C0117B93ABC00D839AB /* Control */ = {
 			isa = PBXGroup;
 			children = (
+				3D3A157F17B94FDE004C044F /* fontawesome-webfont.ttf */,
 				3D2E5C0217B93ABC00D839AB /* PPiFlatSegmentedControl.h */,
 				3D2E5C0317B93ABC00D839AB /* PPiFlatSegmentedControl.m */,
 			);
@@ -128,9 +141,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3D2E5BFE17B93AAC00D839AB /* Build configuration list for PBXNativeTarget "PPiFlatSegmentedControl-Demo" */;
 			buildPhases = (
+				885D988D496F4BAAB4952F14 /* Check Pods Manifest.lock */,
 				3D2E5BD717B93AAC00D839AB /* Sources */,
 				3D2E5BD817B93AAC00D839AB /* Frameworks */,
 				3D2E5BD917B93AAC00D839AB /* Resources */,
+				A380A0DB9F5F41C29AB5E3DA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -177,10 +192,44 @@
 				3D2E5BF317B93AAC00D839AB /* Default@2x.png in Resources */,
 				3D2E5BF517B93AAC00D839AB /* Default-568h@2x.png in Resources */,
 				3D2E5BF817B93AAC00D839AB /* MainStoryboard.storyboard in Resources */,
+				3D3A158017B94FDE004C044F /* fontawesome-webfont.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		885D988D496F4BAAB4952F14 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A380A0DB9F5F41C29AB5E3DA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3D2E5BD717B93AAC00D839AB /* Sources */ = {
@@ -274,6 +323,7 @@
 		};
 		3D2E5BFF17B93AAC00D839AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A86ECC264384EF0AD869839 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PPiFlatSegmentedControl-Demo/PPiFlatSegmentedControl-Demo-Prefix.pch";
@@ -285,6 +335,7 @@
 		};
 		3D2E5C0017B93AAC00D839AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A86ECC264384EF0AD869839 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PPiFlatSegmentedControl-Demo/PPiFlatSegmentedControl-Demo-Prefix.pch";
@@ -313,6 +364,7 @@
 				3D2E5C0017B93AAC00D839AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
