@@ -181,12 +181,17 @@
  *	@param	index	Index of the segment that has to be modified
  */
 
--(void)setTitle:(NSString*)title forSegmentAtIndex:(NSUInteger)index{
+-(void)setTitle:(id)title forSegmentAtIndex:(NSUInteger)index{
     //Getting the Segment
     if(index<self.segments.count){
         UIButton *segment=self.segments[index];
-        [segment setTitle:title forState:UIControlStateNormal];
-        [segment setTitle:title forState:UIControlStateHighlighted];
+        if([title isKindOfClass:[NSString class]]){
+            [segment setTitle:title forState:UIControlStateNormal];
+            [segment setTitle:title forState:UIControlStateHighlighted];
+        }else if ([title isKindOfClass:[NSAttributedString class]]){
+            [segment setAttributedTitle:title forState:UIControlStateNormal];
+            [segment setAttributedTitle:title forState:UIControlStateNormal];
+        }
     }
 }
 -(void)setTextFont:(UIFont *)textFont{

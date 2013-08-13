@@ -38,7 +38,7 @@ typedef void(^selectionBlock)(NSUInteger segmentIndex);
 - (id)initWithFrame:(CGRect)frame andItems:(NSArray*)items andSelectionBlock:(selectionBlock)block;
 -(void)setEnabled:(BOOL)enabled forSegmentAtIndex:(NSUInteger)segment;
 -(BOOL)isEnabledForSegmentAtIndex:(NSUInteger)index;
--(void)setTitle:(NSString*)title forSegmentAtIndex:(NSUInteger)index;
+-(void)setTitle:(id)title forSegmentAtIndex:(NSUInteger)index;
 -(void)setTitleTextAttributes:(NSDictionary*)attributes;
 
 
