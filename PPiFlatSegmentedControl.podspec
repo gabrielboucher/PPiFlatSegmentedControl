@@ -22,8 +22,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.source_files = 'Control/*.{h,m}'
   s.framework = 'QuartzCore'
-  s.dependency 'FontAwesome-iOS'
-  s.public_header_files = ['PPiFlatSegmentedControl.h','NSString+FontAwesome.h']
+  s.public_header_files = 'Control/*.h'
   s.resource  = 'Control/fontawesome-webfont.ttf'
 
 end
