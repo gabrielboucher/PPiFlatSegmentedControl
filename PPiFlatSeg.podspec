@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'PPiFlatSegmentedControl'
-  s.version = '1.0'
+  s.version = '1.1'
   s.platform = :ios, '5.0'
   s.license = 'MIT'
   s.summary = 'Flat UISegmentedControl for flat designs.'
@@ -8,7 +8,9 @@ Pod::Spec.new do |s|
   s.author = { 'Pedro Piñera' => 'pepibumur@gmail.com' }
   s.source = { :git => 'https://github.com/pepibumur/PPiFlatSegmentedControl.git', :tag => '1.0' }
 
-  s.description = 'PPiFlatSegmentedControl is an UI Control developed avoiding original UISegmentedControl to get interesting features related with the flat design. It's linked with AwesomeFont library in order to add icons to segments
+  s.description = <<-DESC
+
+  PPiFlatSegmentedControl is an UI Control developed avoiding original UISegmentedControl to get interesting features related with the flat design. It's linked with AwesomeFont library in order to add icons to segments
 
   For iOS apps, edit your app's Info.plist to contain the key:
                     "Fonts provided by application" (UIAppFonts). Then add
@@ -17,8 +19,8 @@ Pod::Spec.new do |s|
                     <key>UIAppFonts</key>
                     <array>
                         <string>fontawesome-webfont.ttf</string>
-                    </array>'
-
+                    </array>
+                    DESC
   s.requires_arc = true
   s.source_files = 'Control/*.{h,m}'
   s.framework = 'QuartzCore'
