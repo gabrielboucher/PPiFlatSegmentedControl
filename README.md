@@ -45,7 +45,19 @@ The parameters you are able to modify are the following:
 * **borderColor**: Color "" ""
 
 *Note: When you initialize the control you have to pass a Block with the behaviour when any segment has been selected*
+
+### Important Extra
+If you want to use Awesome Font you must add this font into your App Info.plist. Edit your app's Info.plist to contain the key:
+                    "Fonts provided by application" (UIAppFonts). Then add
+                    "FontAwesome.otf" to the list under that key.
+
+                    <key>UIAppFonts</key>
+                    <array>
+                        <string>fontawesome-webfont.ttf</string>
+                    </array>
  
+From know you can use a NSString category to get symbols:
+```[NSString awesomeIcon:AwesomeIconFacebook]```
 ## Screenshots
 ![image](http://img202.imageshack.us/img202/5927/faws.png)
 
