@@ -13,6 +13,16 @@ typedef void(^selectionBlock)(NSUInteger segmentIndex);
 
 @interface PPiFlatSegmentedControl : UIView
 
+/**
+ *	PROPERTIES
+ * textFont: Font of text inside segments
+ * textColor: Color of text inside segments
+ * selectedTextColor: Color of text inside segments ( selected state )
+ * color: Background color of full segmentControl
+ * selectedColor: Background color for segment in selected state
+ * borderWith: Width of the border line around segments and control
+ * borderColor: Color "" ""
+ */
 
 @property (nonatomic,strong) UIColor *selectedColor;
 @property (nonatomic,strong) UIColor *color;

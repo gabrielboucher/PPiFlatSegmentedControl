@@ -1,7 +1,7 @@
 ## PPiFlatSegmentedControl for iOS
 
 PPiFlatSegmentedControl is an UI Control developed avoiding original UISegmentedControl to get interesting features related with the flat design. 
-It's linked with AwesomeFont library in order to add icons to segments like in the snapshot bellow
+For better appearance you can add Font Awesome library to your project and use their icons into the Segmented Control
 
 [Font Awesome Icons](http://fortawesome.github.io/Font-Awesome/icons/)
 
@@ -46,8 +46,8 @@ The parameters you are able to modify are the following:
 
 *Note: When you initialize the control you have to pass a Block with the behaviour when any segment has been selected*
 
-#### Important Extra
-If you want to use Awesome Font you must add this font into your App Info.plist. Edit your app's Info.plist to contain the key:
+#### Important Extra: Awesome Icons
+The examples shown use FontAwesome library, you can add to your project using its Pod. Remember to add this font into your App Info.plist. Edit your app's Info.plist to contain the key:
                     "Fonts provided by application" (UIAppFonts).
 
                     <key>UIAppFonts</key>

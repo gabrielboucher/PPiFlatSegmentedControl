@@ -30,6 +30,16 @@
 @synthesize borderWidth=_borderWidth;
 @synthesize selBlock=_selBlock;
 
+
+/**
+ *	Method for initialize PPiFlatSegmentedControl
+ *
+ *	@param	frame	CGRect for segmented frame
+ *	@param	items	List of NSString items for each segment
+ *	@param	block	Block called when the user has selected another segment
+ *
+ *	@return	Instantiation of PPiFlatSegmentedControl
+ */
 - (id)initWithFrame:(CGRect)frame andItems:(NSArray*)items andSelectionBlock:(selectionBlock)block{
     self = [super initWithFrame:frame];
     if (self) {
@@ -95,6 +105,13 @@
     }
 }
 #pragma mark - Getters
+/**
+ *	Returns if a specified segment is selected
+ *
+ *	@param	index	Index of segment to check
+ *
+ *	@return	BOOL selected
+ */
 -(BOOL)isEnabledForSegmentAtIndex:(NSUInteger)index{
     return (index==self.currentSelected);
 }
@@ -152,6 +169,14 @@
     _borderWidth=borderWidth;
     [self updateSegmentsFormat];
 }
+
+/**
+ *	Using this method name of a specified segmend can be changed
+ *
+ *	@param	title	Title to be applied to the segment
+ *	@param	index	Index of the segment that has to be modified
+ */
+
 -(void)setTitle:(NSString*)title forSegmentAtIndex:(NSUInteger)index{
     //Getting the Segment
     if(index<self.segments.count){
@@ -169,6 +194,12 @@
     _borderColor=borderColor;
     [self updateSegmentsFormat];
 }
+/**
+ *	Method for select/unselect a segment
+ *
+ *	@param	enabled	BOOL if the given segment has to be enabled/disabled ( currently disable option is not enabled )
+ *	@param	segment	Segment to be selected/unselected
+ */
 -(void)setEnabled:(BOOL)enabled forSegmentAtIndex:(NSUInteger)segment{
     if(enabled){
         self.currentSelected=segment;
