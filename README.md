@@ -48,3 +48,6 @@ The parameters you are able to modify are the following:
  
 ## Screenshots
 ![image](http://img202.imageshack.us/img202/5927/faws.png)
+
+## License
+PPiFlatSegmentedControl is available under the MIT license. See the LICENSE file for more info.
