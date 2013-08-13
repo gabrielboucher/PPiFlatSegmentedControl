@@ -31,12 +31,15 @@ typedef void(^selectionBlock)(NSUInteger segmentIndex);
 @property (nonatomic,strong) UIFont *textFont;
 @property (nonatomic,strong) UIColor *borderColor;
 @property (nonatomic) CGFloat borderWidth;
+@property (nonatomic,strong) NSDictionary *textAttributes;
+@property (nonatomic,strong) NSDictionary *selectedTextAttributes;
 
 
 - (id)initWithFrame:(CGRect)frame andItems:(NSArray*)items andSelectionBlock:(selectionBlock)block;
 -(void)setEnabled:(BOOL)enabled forSegmentAtIndex:(NSUInteger)segment;
 -(BOOL)isEnabledForSegmentAtIndex:(NSUInteger)index;
 -(void)setTitle:(NSString*)title forSegmentAtIndex:(NSUInteger)index;
+-(void)setTitleTextAttributes:(NSDictionary*)attributes;
 
 
 @end

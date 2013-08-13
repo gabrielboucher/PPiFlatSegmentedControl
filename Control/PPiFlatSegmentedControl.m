@@ -29,7 +29,8 @@
 @synthesize separators=_separators;
 @synthesize borderWidth=_borderWidth;
 @synthesize selBlock=_selBlock;
-
+@synthesize textAttributes=_textAttributes;
+@synthesize selectedTextAttributes=_selectedTextAttributes;
 
 /**
  *	Method for initialize PPiFlatSegmentedControl
@@ -140,12 +141,15 @@
             [segment setBackgroundColor:self.selectedColor];
             [segment setTitleColor:self.selectedTextColor forState:UIControlStateNormal];
             [segment setTitleColor:self.selectedTextColor forState:UIControlStateHighlighted];
-
+            if(self.selectedTextAttributes)
+                [segment.titleLabel setValuesForKeysWithDictionary:self.selectedTextAttributes];
         }else{
             //Non selected
             [segment setBackgroundColor:self.color];
             [segment setTitleColor:self.textColor forState:UIControlStateNormal];
             [segment setTitleColor:self.textColor forState:UIControlStateHighlighted];
+            if(self.textAttributes)
+                [segment.titleLabel setValuesForKeysWithDictionary:self.textAttributes];
         }
     }
 }
@@ -205,6 +209,14 @@
         self.currentSelected=segment;
         [self updateSegmentsFormat];
     }
+}
+-(void)setTextAttributes:(NSDictionary *)textAttributes{
+    _textAttributes=textAttributes;
+    [self updateSegmentsFormat];
+}
+-(void)setSelectedTextAttributes:(NSDictionary *)selectedTextAttributes{
+    _selectedTextAttributes=selectedTextAttributes;
+    [self updateSegmentsFormat];
 }
 @end
 
