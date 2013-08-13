@@ -46,10 +46,9 @@ The parameters you are able to modify are the following:
 
 *Note: When you initialize the control you have to pass a Block with the behaviour when any segment has been selected*
 
-### Important Extra
+#### Important Extra
 If you want to use Awesome Font you must add this font into your App Info.plist. Edit your app's Info.plist to contain the key:
-                    "Fonts provided by application" (UIAppFonts). Then add
-                    "FontAwesome.otf" to the list under that key.
+                    "Fonts provided by application" (UIAppFonts).
 
                     <key>UIAppFonts</key>
                     <array>
