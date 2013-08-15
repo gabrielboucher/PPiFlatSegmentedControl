@@ -138,19 +138,20 @@
         [segment.titleLabel setFont:self.textFont];
         if([self.segments indexOfObject:segment]==self.currentSelected){
             //Selected-one
-            [segment setBackgroundColor:self.selectedColor];
-            [segment setTitleColor:self.selectedTextColor forState:UIControlStateNormal];
-            [segment setTitleColor:self.selectedTextColor forState:UIControlStateHighlighted];
+            if(self.selectedColor)[segment setBackgroundColor:self.selectedColor];
+            if(self.selectedTextColor)[segment setTitleColor:self.selectedTextColor forState:UIControlStateNormal];
+            if(self.selectedTextColor)[segment setTitleColor:self.selectedTextColor forState:UIControlStateHighlighted];
             if(self.selectedTextAttributes)
                 [segment.titleLabel setValuesForKeysWithDictionary:self.selectedTextAttributes];
         }else{
             //Non selected
-            [segment setBackgroundColor:self.color];
-            [segment setTitleColor:self.textColor forState:UIControlStateNormal];
-            [segment setTitleColor:self.textColor forState:UIControlStateHighlighted];
+            if(self.color)[segment setBackgroundColor:self.color];
+            if(self.textColor)[segment setTitleColor:self.textColor forState:UIControlStateNormal];
+            if(self.textColor)[segment setTitleColor:self.textColor forState:UIControlStateHighlighted];
             if(self.textAttributes)
                 [segment.titleLabel setValuesForKeysWithDictionary:self.textAttributes];
         }
+        segment.titleLabel.textAlignment = NSTextAlignmentCenter;
     }
 }
 -(void)setSelectedColor:(UIColor *)selectedColor{
@@ -187,9 +188,7 @@
         UIButton *segment=self.segments[index];
         if([title isKindOfClass:[NSString class]]){
             [segment setTitle:title forState:UIControlStateNormal];
-            [segment setTitle:title forState:UIControlStateHighlighted];
         }else if ([title isKindOfClass:[NSAttributedString class]]){
-            [segment setAttributedTitle:title forState:UIControlStateNormal];
             [segment setAttributedTitle:title forState:UIControlStateNormal];
         }
     }
