@@ -167,7 +167,7 @@
     [self updateSegmentsFormat];
 }
 -(void)setSelectedTextColor:(UIColor *)selectedTextColor{
-    selectedTextColor=_selectedTextColor;
+    _selectedTextColor=selectedTextColor;
     [self updateSegmentsFormat];
 }
 -(void)setBorderWidth:(CGFloat)borderWidth{
